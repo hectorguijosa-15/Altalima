@@ -13,7 +13,7 @@ class Compra extends Model
     protected $primaryKey = 'id_compra';
 
     protected $fillable = [
-        'id_proveedor',
+        'id_proovedor',
         'fecha_compra',
         'total_compra',
         'estado_pago',
