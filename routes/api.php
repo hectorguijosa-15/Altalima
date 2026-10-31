@@ -14,19 +14,18 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
-
-Route::apiResource('detalle-compras', DetalleCompraController::class)->only(['index', 'show']);
-Route::apiResource('detalle-pedidos', DetallePedidoController::class)->only(['index', 'show']);
-Route::apiResource('clientes', ClienteController::class)->only(['index', 'show']);
-Route::apiResource('productos', ProductoController::class)->only(['index', 'show']);
-Route::apiResource('materiales', MaterialController::class)->only(['index', 'show'])
+Route::apiResource('clientes', ClienteController::class);
+Route::apiResource('productos', ProductoController::class);
+Route::apiResource('materiales', MaterialController::class)
     ->parameters(['materiales' => 'material']);
-Route::apiResource('proovedores', ProovedorController::class)->only(['index', 'show'])
+Route::apiResource('proovedores', ProovedorController::class)
     ->parameters(['proovedores' => 'proovedor']);
-Route::apiResource('pedidos', PedidoController::class)->only(['index', 'show']);
-Route::apiResource('compras', CompraController::class)->only(['index', 'show']);
-Route::apiResource('pagos', PagoController::class)->only(['index', 'show']);
-Route::apiResource('movimientos', MovimientoInventarioController::class)->only(['index', 'show']);
+Route::apiResource('pedidos', PedidoController::class);
+Route::apiResource('compras', CompraController::class);
+Route::apiResource('detalle-pedidos', DetallePedidoController::class);
+Route::apiResource('detalle-compras', DetalleCompraController::class);
+Route::apiResource('pagos', PagoController::class);
+Route::apiResource('movimientos', MovimientoInventarioController::class);
 
 
 // Route::get('/user', function (Request $request) {
